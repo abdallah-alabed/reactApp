@@ -13,6 +13,10 @@ class HornedBeasts extends Component {
     });
   };
 
+  showModal = () => {
+    this.props.opening(this.props.title);
+  };
+
   render() {
     return (
       <div>
@@ -22,15 +26,21 @@ class HornedBeasts extends Component {
           <img
             src={this.props.imgSrc}
             alt={this.props.title}
-            title="animal image"
+            title={this.props.title}
+            width="300px"
+            height="300px"
           />{" "}
         </button>
         <p> description : {this.props.description} </p>
         <p>
           {" "}
           Favourites (Press on the Image to Add as a Favourite):{" "}
-          {this.state.likesInt}{" "}
+          {this.state.likesInt}❤️
         </p>
+        <button onClick={this.showModal} id={this.props.title}>
+          {" "}
+          Show Beast Details
+        </button>
       </div>
     );
   }

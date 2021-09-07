@@ -14,3 +14,15 @@ Start time: 1:30 pm
 Finish time: 3:00 pm
 
 Actual time needed to complete: 90 minutes
+
+<!-- //////////////////  -->
+
+Number and name of feature: feature#2 use ReactBootstrap and Modals
+
+Estimate of time needed to complete: 60 minutes
+
+Start time: 2:15 pm
+
+Finish time: 3:15 pm
+
+Actual time needed to complete: 60 minutes
