@@ -2,32 +2,26 @@ import React, { Component } from "react";
 import HornedBeasts from "./HornedBeasts";
 // import moose from '../images/moose.jpg'
 // import rhino from '../images/rhino.jpg'
+import data from "./data.json";
+import "bootstrap/dist/css/bootstrap.min.css";
+// import SelectedBeast from "./SelectedBeast";
 
 class Main extends Component {
-  // constructor(props) {
-  //     super(props);
-  //     this.state = {
-  //         stateLikes: this.props.likesInt,
-  //     }
-  // }
-  // addLikes = () => {
-  //     this.setState({
-  //         likesInt: this.state.stateLikes + 1
-  //     })
-  // }
-
   render() {
-    let beasts = require("./data.json");
+    // let beasts = require("./data.json");
     return (
       <>
-        {beasts.map((elem) => {
+        {data.map((elem) => {
           return (
             <>
               <HornedBeasts
+                opening={this.props.opening}
                 title={elem.title}
                 description={elem.description}
                 imgSrc={elem.image_url}
               />
+              
+                
             </>
           );
         })}
