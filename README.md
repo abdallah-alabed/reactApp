@@ -17,12 +17,12 @@ Actual time needed to complete: 90 minutes
 
 <!-- //////////////////  -->
 
-Number and name of feature: feature#2 use ReactBootstrap and Modals
+Number and name of feature: feature#2 use ReactBootstrap to create Cards, Grid and Modals 
 
-Estimate of time needed to complete: 60 minutes
+Estimate of time needed to complete: 2 Hours
 
 Start time: 2:15 pm
 
-Finish time: 3:15 pm
+Finish time: 6 pm
 
-Actual time needed to complete: 60 minutes
+Actual time needed to complete: 3:45 hours
