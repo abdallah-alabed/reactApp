@@ -10,7 +10,8 @@ class Form extends Component {
               this.props.handleHorns(e);
             }}
           >
-            <option value="1"> Filter By # of Horns (High to low) </option>
+            <option value="1"> Filter By # of Horns (High to Low) </option>
+            <option value="2"> Filter By # of Horns (Low to High) </option>
           </select>
           <input type="submit" />
         </form>
