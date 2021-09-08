@@ -17,7 +17,7 @@ class Main extends Component {
           <>
             {this.props.data.map((elem) => {
               return (
-                <Col>
+                <Col xs={4}>
                   <HornedBeasts
                     opening={this.props.opening}
                     title={elem.title}
