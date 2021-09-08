@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SelectedBeast from "./components/SelectedBeast";
 // import HornedBeasts from "./components/HornedBeasts";
 import data from "./components/data.json";
-import Form from "./components/Form";
+import FormFilter from "./components/FormFilter";
 
 class App extends Component {
   constructor(props) {
@@ -69,7 +69,7 @@ class App extends Component {
       <div>
         <Header />
         <br></br>
-        <Form handleSubmit={this.handleSubmit} handleHorns={this.handleHorns} />
+        <FormFilter handleSubmit={this.handleSubmit} handleHorns={this.handleHorns} />
         <br></br>
         <Main opening={this.opening} data={this.state.data} />
         <br></br>
