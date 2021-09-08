@@ -26,3 +26,15 @@ Start time: 2:15 pm
 Finish time: 6 pm
 
 Actual time needed to complete: 3:45 hours
+
+<!-- //////////////////  -->
+
+Number and name of feature: feature#3 Forms and Filters 
+
+Estimate of time needed to complete: 1 Hour
+
+Start time: 2:15 pm
+
+Finish time: 3:45 pm
+
+Actual time needed to complete: 1:30 hours
