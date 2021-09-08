@@ -15,27 +15,36 @@ class App extends Component {
       data: data,
       showInfo: false,
       selectedBeast: {},
-      showUser: false
+      showUser: false,
     };
   }
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.setState({
-      showUser: true,
-      data: data.sort((a,b)=>{
-        return b.horns - a.horns;
-      })
-    });
+  handleHorns = (e) => {
+    let filtered = e.target.value;
 
+    this.setState({
+      filtered: filtered,
+    });
   };
 
-  handleHorns = (e) => {
-    let filtered= e.target.value;
-
-    this.setState({
-      filtered : filtered,
-    });
+  handleSubmit = (e) => {
+    e.preventDefault();
+    if (this.state.filtered === "1") {
+      this.setState({
+        showUser: true,
+        data: data.sort((a, b) => {
+          return b.horns - a.horns;
+        }),
+      });
+    }
+    if (this.state.filtered === "2") {
+      this.setState({
+        showUser: true,
+        data: data.sort((a, b) => {
+          return a.horns - b.horns;
+        }),
+      });
+    }
   };
 
   closing = () => {
@@ -52,11 +61,9 @@ class App extends Component {
     this.setState({
       showInfo: true,
       selectedBeast: results,
-      
     });
   };
 
-  
   render() {
     return (
       <div>
@@ -66,11 +73,12 @@ class App extends Component {
         <br></br>
         <Main opening={this.opening} data={this.state.data} />
         <br></br>
-        {this.state.showUser} ?<SelectedBeast
+        {this.state.showUser} ?
+        <SelectedBeast
           closing={this.closing}
           showInfo={this.state.showInfo}
           beastInfo={this.state.selectedBeast}
-        /> 
+        />
         <br></br>
         <Footer />
       </div>
