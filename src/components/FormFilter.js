@@ -16,6 +16,10 @@ class FormFilter extends Component {
             <option value="0">Filter By:</option>
             <option value="1"> Filter By # of Horns (High to Low) </option>
             <option value="2"> Filter By # of Horns (Low to High) </option>
+            <option value="3"> Beasts with One Horn </option>
+            <option value="4"> Beasts with Two Horns </option>
+            <option value="5"> Beasts with Three Horns </option>
+            <option value="6"> Beasts with 100 Horns </option>
           </Form.Select>
           <Button variant="primary" type="submit" >
             Filter

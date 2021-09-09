@@ -29,6 +29,7 @@ class App extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+
     if (this.state.filtered === "1") {
       this.setState({
         showUser: true,
@@ -42,6 +43,38 @@ class App extends Component {
         showUser: true,
         data: data.sort((a, b) => {
           return a.horns - b.horns;
+        }),
+      });
+    }
+    if (this.state.filtered === "3") {
+      this.setState({
+        showUser: true,
+        data: data.filter((a) => {
+          if (a.horns === 1) return a.horns;
+        }),
+      });
+    }
+    if (this.state.filtered === "4") {
+      this.setState({
+        showUser: true,
+        data: data.filter((a) => {
+          if (a.horns === 2) return a.horns;
+        }),
+      });
+    }
+    if (this.state.filtered === "5") {
+      this.setState({
+        showUser: true,
+        data: data.filter((a) => {
+          if (a.horns === 3) return a.horns;
+        }),
+      });
+    }
+    if (this.state.filtered === "6") {
+      this.setState({
+        showUser: true,
+        data: data.filter((a) => {
+          if (a.horns === 100) return a.horns;
         }),
       });
     }
@@ -69,11 +102,14 @@ class App extends Component {
       <div>
         <Header />
         <br></br>
-        <FormFilter handleSubmit={this.handleSubmit} handleHorns={this.handleHorns} />
+        <FormFilter
+          handleSubmit={this.handleSubmit}
+          handleHorns={this.handleHorns}
+        />
         <br></br>
         <Main opening={this.opening} data={this.state.data} />
         <br></br>
-        {this.state.showUser} ?
+        {this.state.showUser}
         <SelectedBeast
           closing={this.closing}
           showInfo={this.state.showInfo}
